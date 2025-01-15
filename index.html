@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CNY2025-lp</title>
+    <link rel="stylesheet" href="./resources/scss/index.css" />
+    <link href="./resources/fonts/css/fontawesome.css" rel="stylesheet" />
+    <link href="./resources/fonts/css/brands.css" rel="stylesheet" />
+    <link href="./resources/fonts/css/solid.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo"><img src="./resources/images/logo.png" alt="" /></div>
+    </div>
+    <div class="up-btn"><i class="fa-solid fa-arrow-up"></i></div>
+    <div class="site-txt-deco">奇|异|果|福|利|大|放|送</div>
+    <div class="top-content">
+      <div class="deco">
+        <img src="./resources/images/ingot-1.png" alt="" />
+      </div>
+      <div class="deco">
+        <img src="./resources/images/ingot-2.png" alt="" />
+      </div>
+      <div class="main-wrapper">
+        <div class="main-title">
+          <img src="./resources/images/title.png" alt="" />
+        </div>
+        <div class="main-btn">
+          <img src="./resources/images/btn-1.png" alt="" />
+        </div>
+        <div class="arrow">
+          <img src="./resources/images/arrow.png" alt="" />
+        </div>
+      </div>
+      <div class="main-img">
+        <img src="./resources/images/model-bg.jpg" alt="" />
+      </div>
+    </div>
+    <div class="middle-content">
+      <div class="first-column">
+        <div class="middle-img">
+          <img src="./resources/images/img-1.png" alt="" />
+        </div>
+      </div>
+      <div class="second-column">
+        <div class="middle-title">
+          <div class="tagline">
+            过年团聚时刻，<br />
+            好友邀请双倍福利！
+          </div>
+          抽红包+礼金
+        </div>
+        <div class="qr-wrapper">
+          <div class="qr">
+            <img src="./resources/images/qr.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="middle-background">
+        <!-- <img src="./resources/images/border.png" alt="" /> -->
+      </div>
+    </div>
+    <div class="event-content">
+      <div class="event-title">新人精彩活动</div>
+      <div class="event-wrapper">
+        <div class="event-img-wrapper promo-1">
+          <div class="event-img">
+            <img src="./resources/images/promo-img-1.png" alt="" />
+          </div>
+        </div>
+        <div class="event-content-wrapper promo-1">
+          <div class="event-txt">
+            新手攻略三重奏<span>完善资料 首存 负利皆有礼</span>
+          </div>
+          <div class="event-btn">
+            <img src="./resources/images/btn-2.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="event-wrapper">
+        <div class="event-img-wrapper promo-2">
+          <div class="event-img">
+            <img src="./resources/images/promo-img-2.png" alt="" />
+          </div>
+        </div>
+        <div class="event-content-wrapper promo-2">
+          <div class="event-txt">新会员首存福利<span>新会员首存福利</span></div>
+          <div class="event-btn">
+            <img src="./resources/images/btn-2.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="event-wrapper">
+        <div class="event-img-wrapper promo-3">
+          <div class="event-img">
+            <img src="./resources/images/promo-img-3.png" alt="" />
+          </div>
+        </div>
+        <div class="event-content-wrapper promo-3">
+          <div class="event-txt">
+            邀请好友抽现金<span>分享赚钱 上不封顶</span>
+          </div>
+          <div class="event-btn">
+            <img src="./resources/images/btn-2.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="event-img-deco">
+        <img src="./resources/images/deco.png" alt="" />
+      </div>
+    </div>
+    <div class="footer">
+      <div class="logo"><img src="./resources/images/logo.png" alt="" /></div>
+      <div class="copyright">© 2001-2025 奇异果体育 版权所有</div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+      const btn = document.querySelector(".up-btn");
+      const footer = document.querySelector(".footer");
+      window.addEventListener("scroll", () => {
+        if (
+          window.scrollY + window.innerHeight >=
+          document.documentElement.scrollHeight
+        ) {
+          // Show the footer when scrolled to the bottom
+          footer.style.opacity = "1";
+        } else if (
+          window.scrollY + window.innerHeight <
+          document.documentElement.scrollHeight
+        ) {
+          // Hide the footer when scrolling up from the bottom
+          footer.style.opacity = "0";
+          if (window.scrollY > 300) {
+            btn.style.opacity = "1"; // Show the button
+            btn.style.pointerEvents = "visible";
+          } else {
+            btn.style.opacity = "0"; // Hide the button
+            btn.style.pointerEvents = "none";
+          }
+        }
+      });
+
+      btn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
+  </body>
+</html>
